@@ -41,7 +41,7 @@ router.post('/paymentgateway/payumoney', async (req, res) =>{
 
 // Route for handling successful payment response
 router.get('/success', (req, res) => {
-    req.flash("success", "Payment Successful Thank You for shopping with IndianSpiceMart");
+    req.flash("success", "Payment Successful!!, Thank You for shopping with IndianSpiceMart");
     res.redirect("/");
 });
 
