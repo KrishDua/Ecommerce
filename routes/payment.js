@@ -40,17 +40,15 @@ router.post('/paymentgateway/payumoney', async (req, res) =>{
 });
 
 // Route for handling successful payment response
-router.post('/payment/success', (req, res) => {
+router.get('/success', (req, res) => {
     req.flash("success", "Payment Successful Thank You for shopping with IndianSpiceMart");
-    console.log("Payment Success:", req.body);
     res.redirect("/");
 });
 
 // Route for handling failed payment response
-router.post('/payment/cancel', (req, res) => {
+router.get('/cancel', (req, res) => {
     // Handle failed response from PayUmoney
     req.flash("error", "Payment Failed");
-    console.log("Payment Failed:", req.body);
     res.redirect("/cart");
 });
 
