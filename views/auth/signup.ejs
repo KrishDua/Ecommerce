@@ -1,0 +1,73 @@
+<% layout('layouts/boilerplate') %>
+<%- include("../partials/navbar")%>
+<%- include("../partials/carousel")%>
+<%- include("../partials/flash")%>
+              <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div> -->
+<div id="product">
+    <p>Sign up</p>
+  </div>
+<div id="addform1" class="row">
+    <div class="col-6 mx-auto">
+        <form class="needs-validation" action="/register" method="POST" novalidate>
+            <div class="mb-3 mx-auto">
+                <label for="username">Username :</label>
+                <input style="width: 100%;" type="text" class="form-control" name="username" id="username" placeholder="Enter your username" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a username.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="Email">Email id:</label>
+                <input style="width: 100%;" type="email" class="form-control" name="email" id="email" placeholder="Enter your Email id" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter an Email id.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password">Password :</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a password.
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit">Sign up</button>
+            <br>
+            <p >Already have an account ? <a href="/login#product">Login</a></p>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<%- include("../partials/footer")%>
+<script>
+    (() => {
+      'use strict'
+    // iife :- immediately invoked funtional expression 
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+    </script>

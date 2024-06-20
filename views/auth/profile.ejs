@@ -1,0 +1,12 @@
+<% layout('layouts/boilerplate') %>
+<%- include("../partials/navbar")%>
+<%- include("../partials/carousel")%>
+<%- include("../partials/flash")%>
+<div id="product">
+  <p>Your Account</p>
+</div>
+<div class="profile">
+    <p>Username : <%=myuser.username%></p>
+    <p>Email : <%= myuser.email%></p>
+</div>
+<%- include("../partials/footer")%>

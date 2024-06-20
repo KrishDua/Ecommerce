@@ -1,0 +1,73 @@
+<% layout('layouts/boilerplate') %>
+<%- include("../partials/navbar")%>
+<%- include("../partials/carousel")%>
+<%- include("../partials/flash")%>
+<%if(user.cart.length > 0){%>
+    <div id="product">
+        <p><%=currentUser.username%>'s Cart</p>
+      </div>
+    <div>
+        <% for(let i = 0;i < user.cart.length;i += 4){%>
+            <div class="midbar">
+                <% for(let j = i;j < i + 4 && j < user.cart.length;j++){ %>
+                  <% let item = user.cart[j]; %>
+                        <div style="width: 20%; height: 90%;">
+                         <a  target="_parent" href="/<%=encodeURIComponent(item.name)%>#product"><img class="image" src="<%=item.itemid.img%>" class="card-img-top" alt="..."></a> 
+                            <p class="desc" ><%=item.itemid.name%></p>
+                            <h5 id="buybtn" >
+                            $<%=item.itemid.price%>
+                            Qty <%=item.quantity%>
+                            </h5>
+                            <h5 id="buybtn">
+                                <form action="/cart/<%=item._id%>/delete" method="POST">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </h5>
+                          </div>
+               <% } %>
+              </div>
+              <br>
+              <br>
+               <% } %>
+               <br>
+               <br>
+               <br>
+    </div>
+    <div class="row">
+        <div class="col-6 mx-auto" style="margin-bottom: 5%;">
+            <form action="paymentgateway/payumoney" method="POST">
+                <div style="display: flex;
+                            flex-direction: row;
+                            justify-content: center">
+                    <!-- <div style="display: flex; flex-direction: row; justify-content: space-evenly;" > -->
+                        <label for="amount">Total Amount:  </label>
+                        <div>
+                            $<input style="text-align: center;" class="amount" name="amount" value="<%=totalamount%>"/>
+                        </div>
+                    <!-- </div> -->
+                </div>
+                <input class="con" type="hidden" name="phone" value="9811111111" />
+                <input type="hidden" name="service_provider" 
+                 value="payu_paisa"/>
+                <input type="hidden" class="product" name="productinfo" 
+                 value="educational purpose"/>
+                 <!-- <input type="submit" value="Pay"/> -->
+                 <br>
+                 <br>
+                 <div style="display: flex;
+                 flex-direction: row;
+                 justify-content: center">
+                     <button class="btn btn-success">Proceed to Pay</button>
+                 </div>
+                </form>
+        </div>
+    </div>
+ <% }else{ %>
+    <div >
+        <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8vxcXbyvy5JHHV_7wMO_HQv-j6aZxX0I5MA&s" alt="">
+        <p style="font-size: 50px; text-align: center;">Your cart is empty</p>
+        <p class="text-muted" style="font-size: 30px; text-align: center;">Looks like you haven't made
+            your choice yet....</p>
+    </div>
+    <% } %>
+<%- include("../partials/footer")%>

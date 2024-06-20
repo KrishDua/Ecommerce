@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate') %>
+<%- include("../partials/navbar")%>
+<%- include("../partials/carousel")%>
+<%- include("../partials/flash")%>
+<div id="product">
+  <p><%=Productname%></p>
+</div>
+<br>
+<% for(let i = 0;i < collection.length;i += 4){%>
+    <div class="midbar">
+        <% for(let j = i;j < i + 4 && j < collection.length;j++){ %>
+          <% let item = collection[j]; %>
+                <div style="width: 20%; height: 90%">
+                    <a  href="/<%=encodeURIComponent(Productname)%>/<%=item._id%>#prod"><img class="image" src="<%=item.img%>" class="card-img-top" alt="..."></a>
+                    <p class="desc"><%=item.name%>  </p>
+                    <h5 id="buybtn"> $<%=item.price%> 
+                    <%if(item.reviews.length){%>
+                      <p ><%=item.reviews.length%> reviews</p>
+                    <%}else{%>
+                      <p>No reviews</p>
+                    <%}%>
+                    </h5>
+                    <!-- <br> -->
+                    <h5 id="buybtn" >
+                            <a id="btntext" href="/<%=encodeURIComponent(Productname)%>/<%=item._id%>#prod" class="btn btn-success" >View Product</a>
+                    </h5>
+                    <!-- <div >
+                      <p class="desc" ><%=item.desc%></p>
+                    </div> -->
+                  </div>
+       <% } %>
+      </div>
+      <br>
+      <br>
+       <% } %>
+       <br>
+       <br>
+       <br>
+<%- include("../partials/footer")%>

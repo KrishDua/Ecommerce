@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate') %>
+<%- include("../partials/navbar")%>
+<%- include("../partials/carousel")%>
+<%- include("../partials/flash")%>
+<div id="product">
+  <p>Featured Products</p>
+</div>
+<br>
+<% for(let i = 0;i < products.length;i += 4){%>
+    <div class="midbar">
+        <% for(let j = i;j < i + 4 && j < products.length;j++){ %>
+          <% let item = products[j]; %>
+                <div style="width: 20%; height: 90%;">
+                 <a  target="_parent" href="/<%=encodeURIComponent(item.name)%>#product"><img class="image" src="<%=item.img%>" class="card-img-top" alt="..."></a> 
+                    <h3><%=item.name%></h3>
+                    <h5 id="buybtn" >
+                    Starting  $<%=item.price%>
+                    <a id="btntext" target="_parent"  href="/<%=encodeURIComponent(item.name)%>#product" class="btn btn-success">View</a>
+                    <!-- <form action="/products/<%=item._id%>?_method=DELETE" method="POST">
+                      <button id="btntext" class="btn btn-danger">Delete</button>
+                    </form> -->
+                    <!-- <a id="btntext" target="_parent"  href="/products/edit#addform" class="btn btn-success">Edit</a> -->
+                    </h5>
+                    <div >
+                      <p class="desc" ><%=item.desc%></p>
+                    </div>
+                  </div>
+       <% } %>
+      </div>
+      <br>
+      <br>
+       <% } %>
+       <br>
+       <br>
+       <br>
+<%- include("../partials/footer")%>

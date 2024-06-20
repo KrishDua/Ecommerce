@@ -1,0 +1,79 @@
+<div style="height: 200px;" class="navbar1">
+    <img src="/indianspicemart/titleimg1.png" alt="image loading" id="titleimg">
+    <!-- <div class="search-container">
+      <button id="search-button">
+          <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+      </button>
+      <input type="text" id="search-input" placeholder="Search for products ...">
+  </div> -->
+  <div class="search-container">
+    <button id="search-button">
+                  <!-- &#128269; -->
+        <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+    </button>
+    <input type="text" id="search-input" onkeyup="myFunction()" placeholder="Search for products ...">
+</div>
+  <!-- <a class="navbar1" target="_self" href="/new#product">Add Product</a> -->
+    <% if (currentUser) { %>
+        <a class="navbar1" href="/logout">Logout</a>
+        <a class="navbar1" style="display: flex; 
+                                flex-direction: column;
+                                justify-content: space-evenly;" 
+        href="/profile#product">
+        <% if (currentUser.profileImage) { %>
+            <img style="border-radius: 100%; 
+                        height: 50px; 
+                        width: 50px;" 
+            src="<%=currentUser.profileImage%>" alt="">
+        <% }else { %>
+            <i class="fa-solid fa-xl fa-circle-user" style="color: #3d7324;"></i>
+        <% }%>
+            <sub style="font-size: 15px;"><%=currentUser.username%></sub>
+        </a>
+      <% } else { %>
+        <a href="/login#product">Login</a>
+      <% } %>
+    <!-- <a class="navbar1" href="/login#product">Login</a>
+  <a class="navbar1" href="#">Logout</a> -->
+  <a style="display: flex; flex-direction: row;justify-content: center;" href="/cart#product">  
+    <i class="fa-solid fa-cart-shopping" style="color: #ff9300;"></i>
+    <!-- <i class="fa-solid fa-cart-shopping" style="color: #3d7324;"> </i> -->
+    <sup><span class="badge" style="background-color: green; 
+                                    font-size: 10px; height: 60%; 
+                                    width: 100%; 
+                                    z-index: 1; 
+                                    text-align: center; 
+                                    display: flex; 
+                                    flex-direction: row; 
+                                    align-items: center; 
+                                    justify-content: center;">
+        <% if (currentUser) { %>
+            <%=currentUser.cart.length%>
+        <% }else { %>
+            0
+        <% } %>                         
+        </span></sup> 
+</a>
+</div>
+<nav class="navbar1">
+      <a target="_self" href="/">Home</a>
+        <div class="dropdown">
+          <a href="#">Shop Groceries</a>
+          <div class="dropdown-content">
+              <a href="/Dry%20Fruits#product">Nuts & Dry Fruits</a>
+              <a href="/Snacks#product">Snacks & Biscuits</a>
+              <a href="/Frozen%20Food#product">Fridge & Frozen</a>
+              <!-- <a href="#">Festival Items</a> -->
+              <!-- <a href="#">Tea & Coffee</a> -->
+              <a href="/Spices#product">Spices & Masalas</a>
+              <!-- <a href="#">Beans & Lentils</a> -->
+              <!-- <a href="#">Sweets</a> -->
+          </div>
+      </div>
+      <a target="_self" href="/Oils%20and%20Ghee#product">Ghee & Oils</a>
+      <a target="_self" href="/Breads%20and%20eggs#product">Breads & eggs</a>
+      <a target="_self" href="/Dairy%20Products#product">Dairy Products</a>
+      <a target="_self" href="/Rice#product">Rice</a>
+      <a target="_self" href="/Flour#product">Flour</a>
+      <a target="_self" href="/about#product">About</a>
+</nav>

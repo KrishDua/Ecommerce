@@ -1,0 +1,743 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:focus {
+    outline: none;
+}
+/* searchbar */
+
+.search-container {
+    width: 50%;
+    display: flex;
+    background-color: inherit;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+}
+input::placeholder{
+    color: darkgreen;
+}
+#search-input{
+    background-color: white;
+    width: 100%;
+    font-size: 15px;
+}
+input[type="text"] {
+    text-align: left;
+    width: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+button {
+    background-color: darkorange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+button:hover {
+    background-color:green;
+}
+input::placeholder{
+    color: black;
+}
+textarea::placeholder{
+    color: black;
+}
+#placeholder{
+    background-color: black;
+    color: darkgreen;
+    width: 220px;
+    height: 30px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: darkorange;
+}
+/* .images{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: 100px;
+} */
+/*  */
+/* Existing CSS styles for .images and .pages */
+/*  */
+#review{
+    margin-top: 50px;
+    font-size: 50px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: auto; 
+    color: black;
+    font-style: oblique;
+}
+/* .reviews{
+    margin-bottom: 30%;
+} */
+#product{
+    margin-top: 50px;
+    font-size: 50px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw; 
+    color: black;
+    font-style: oblique;
+}
+
+#titleimg{
+    height: 90%;
+    width: 20%;
+    border-radius: 10px;
+}
+    .dropdown-content {
+        display: none;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        font-size: 10px;
+    }
+
+    /* Show dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Style for dropdown items */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+    }
+
+    /* Change color of dropdown items on hover */
+    .dropdown-content a:hover {
+       color: darkorange;
+    }
+    .navbar{
+        font-size: 100px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 100px;
+        width: auto;
+        color:black;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        }
+        .navbar1{
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 100px;
+            width: auto;
+            color:black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            }
+            #carouselExampleRide {
+                margin: auto;
+                width: 100%; 
+            }
+        
+           
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: transparent !important; 
+            }
+.midbar{
+    z-index: 1;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 100px;
+    background-color: inherit;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 200px;
+    width: auto;
+    align-items: center;
+    color: black;
+}
+.image{
+    width: 97.5%;
+    height: 110%;
+    /* width: 300px;
+    height: 200px; */
+    border-radius: 10%;
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0.5, 0, 0.1);
+}
+.image {
+    transition: transform 0.5s ease; 
+}
+.image:hover {
+    transform: scale(1.05);
+}
+footer{
+    background-color: orange;
+    /* text-align: center; */
+    width: 100%;
+    height: 900px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.footer{
+    margin: 50px;
+    /* display: flex; */
+    /* flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+    /* width: 100%; */
+}
+#line{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    width: 100%;
+    color: green;
+    font-size: 50px;
+}
+.img{
+    margin-left: auto;
+    margin-right: auto;
+    background-color:orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: flex-end; */
+    width: 50%;
+    height: 40%;
+}
+#titleimg1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    border-radius: 10%;
+    height: 65%;
+}
+.foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.credits{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 1;
+    font-size: 12px;
+}
+#buybtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.btn{
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+}
+#prod{
+    z-index: 1;
+    margin-bottom: 15%;
+}
+form > input,
+form > textarea{
+    box-shadow: none;
+    outline: none;
+}
+.about{
+    z-index: 1;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15%;
+    background-color: inherit;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 200px;
+    width: auto;
+    align-items: center;
+    color: black;
+}
+.profile{
+    z-index: 1;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 100px;
+    background-color: inherit;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 200px;
+    width: auto;
+    align-items: center;
+    color: black;
+}
+.oauth{
+    z-index: 1;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 2%;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 150px;
+    width: auto;
+    align-items: center;
+    color: black;
+}
+#img1{
+    height: 40px;
+    width: 40px;
+}
+#rev1{
+    margin-bottom: 30px;
+  }
+/* media queries */
+@media screen and (max-width: 1230px) {
+    #line {
+        font-size: 45px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .desc {
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+@media screen and (max-width: 1190px) {
+    .desc {
+        font-size: 19px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .about{
+        font-size: 19px;
+    }
+    .reviews{
+        font-size: 17px;
+      }
+      #review{
+        margin-top: 0px;
+      }
+}
+@media screen and (max-width: 1130px) {
+    #line {
+        font-size: 40px;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .about{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 1025px) {
+    #line {
+        font-size: 35px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 24px;
+    }
+    .dropdown-content{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1005px) {
+    .rev{
+      width: 40%;
+    }
+    .reviews{
+      font-size: 15px;
+    }
+    #prod{
+      height: 300px;
+    }
+    #revimg{
+      height: 194.8px;
+      width: 198px;
+    }
+  }
+@media screen and (max-width: 950px) {
+    /* #line {
+        font-size: 35px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    } */
+    .navbar1{
+        font-size: 22px;
+    }
+    .dropdown-content{
+        font-size: 10px;
+    }
+    .about{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 930px) {
+    #prod{
+        margin-bottom: 20%;
+    }
+}
+@media screen and (max-width: 890px) {
+    #line {
+        font-size: 30px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 20px;
+    }
+    .dropdown-content{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 870px) {
+    .rev{
+      width: 40%;
+    }
+    .reviews{
+      font-size: 13px;
+    }
+    #review{
+      font-size: 45px;
+    }
+    #revimg{
+      height: 194.8px;
+      width: 180px;
+    }
+  }
+@media screen and (max-width: 800px) {
+    #btntext{
+        font-size: 10px;
+    }
+    #prod{
+        margin-bottom: 25%;
+    }
+}
+@media screen and (max-width: 785px) {
+    .rev{
+      width: 40%;
+    }
+    .reviews{
+      font-size: 11px;
+    }
+  }
+@media screen and (max-width: 768px) {
+    #line {
+        font-size: 25px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 18px;
+    }
+    .midbar h3{
+        font-size: 22px;
+    }
+    .about{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .rev{
+      width: 45%;
+    }
+    .reviews{
+      font-size: 10px;
+    }
+    #prod{
+      height: 325px;
+    }
+  }
+@media screen and (max-width: 730px) {
+    .navbar1{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #line {
+        font-size: 20px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 14px;
+    }
+    .midbar h3{
+        font-size: 18px;
+    }
+    .about{
+        font-size: 11px;
+    }
+    .dropdown-content{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .rev{
+      width: 45%;
+    }
+    .reviews{
+      font-size: 9px;
+    }
+    #review{
+      font-size: 40px;
+      margin-bottom: 0px;
+    }
+    #revimg{
+      height: 194.8px;
+      width: 150px;
+    }
+  }
+@media screen and (max-width: 550px) {
+    #line {
+        font-size: 18px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 11px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 12px;
+    }
+    .midbar h3{
+        font-size: 17px;
+    }
+    .about{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 535px) {
+    .rev{
+      width: 50%;
+    }
+    .reviews{
+      font-size: 8px;
+    }
+    #review{
+      font-size: 35px;
+      margin-bottom: 0px;
+    }
+    #rev1{
+      margin-bottom: 0px;
+    }
+    #revimg{
+      height: 194.8px;
+      width: 120px;
+    }
+  }
+@media screen and (max-width: 500px) {
+    #btntext{
+        font-size: 5px;
+    }
+    #prod{
+        margin-bottom: 30%;
+    }
+}
+@media screen and (max-width: 490px) {
+    #line {
+        font-size: 15px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 9px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 10px;
+    }
+    .midbar h3{
+        font-size: 15px;
+    }
+    .about{
+        font-size: 9px;
+    }
+    .btn{
+        height: 20px;
+        width: 35px;
+    }
+}
+@media screen and (max-width: 425px) {
+    #line {
+        font-size: 12px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .desc {
+        font-size: 9px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 10px;
+    }
+    .midbar h3{
+        font-size: 12px;
+    }
+    .about{
+        font-size: 7px;
+    }
+    .btn{
+        height: 20px;
+        width: 35px;
+    }
+    .footer{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #btntext{
+        font-size: 5px;
+    }
+    #prod{
+        margin-bottom: 35%;
+    }
+    .rev{
+        width: 50%;
+      }
+      .reviews{
+        font-size: 8px;
+      }
+      #review{
+        font-size: 20px;
+        margin-bottom: 0px;
+      }
+      #prod{
+        height: 375px;
+      }
+      #revimg{
+        height: 150px;
+        width: 100px;
+      }
+}
+@media screen and (max-width: 400px) {
+    #prod{
+        margin-bottom: 40%;
+    }
+}
+@media screen and (max-width: 350px) {
+    #line {
+        font-size: 10px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    /* .desc {
+        font-size: 9px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .navbar1{
+        font-size: 10px;
+    }
+    .midbar h3{
+        font-size: 12px;
+    }
+    .btn{
+        height: 20px;
+        width: 35px;
+    }
+    .footer{
+        font-size: 15px;
+    } */
+    .about{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .rev{
+      width: 50%;
+    }
+    .reviews{
+      font-size: 6px;
+    }
+    #review{
+      font-size: 15px;
+      margin-bottom: 0px;
+    }
+    #prod{
+      height: 375px;
+    }
+  }
