@@ -27,8 +27,8 @@ router.post('/paymentgateway/payumoney', async (req, res) =>{
             payment_method_types: ['card'],
             line_items: line_items,
             mode: 'payment',
-            success_url: 'http://localhost:8080/success',
-            cancel_url: 'http://localhost:8080/cancel',
+            success_url: 'https://indianspicemart-cuwn.onrender.com/success',
+            cancel_url: 'https://indianspicemart-cuwn.onrender.com/cancel',
         });
 
         // Redirect to the Stripe session URL
@@ -41,16 +41,17 @@ router.post('/paymentgateway/payumoney', async (req, res) =>{
 
 // Route for handling successful payment response
 router.post('/payment/success', (req, res) => {
-    // Handle success response from PayUmoney
+    req.flash("success", "Payment Successful Thank You for shopping with IndianSpiceMart");
     console.log("Payment Success:", req.body);
-    res.send(req.body);
+    res.redirect("/");
 });
 
 // Route for handling failed payment response
 router.post('/payment/cancel', (req, res) => {
     // Handle failed response from PayUmoney
+    req.flash("error", "Payment Failed");
     console.log("Payment Failed:", req.body);
-    res.send(req.body);
+    res.redirect("/cart");
 });
 
 module.exports = router;
