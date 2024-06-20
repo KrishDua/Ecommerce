@@ -72,7 +72,7 @@ passport.use(new localstrategy(User.authenticate()));
 passport.use(new GoogleStrategy({
     clientID : '1063503259255-8s5mqill36jjf5rm91e2n1o3i5i3mefb.apps.googleusercontent.com' ,
     clientSecret : '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' ,
-    callbackURL : 'http://localhost:8080/login/google/callback',
+    callbackURL : 'https://indianspicemart-cuwn.onrender.com/login/google/callback',
     scope: ['profile', 'email']
 },async(token,tokenSecret,profile,done)=>{
     try {
@@ -99,7 +99,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID : process.env.FB_CLIENT_ID ,
     clientSecret : process.env.FB_CLIENT_SECRET ,
-    callbackURL : "http://localhost:8080/login/facebook/callback",
+    callbackURL : "https://indianspicemart-cuwn.onrender.com/login/facebook/callback",
     profileFields: ['id', 'displayName', 'emails', 'photos']
 },async(token,tokenSecret,profile,done)=>{
     try {
