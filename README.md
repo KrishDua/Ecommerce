@@ -1,4 +1,5 @@
 Project Overview
+
 This project is a fully functional Ecommerce website built using the MERN stack (MongoDB, Express.js,  Node.js) The project uses  CSS, and JavaScript for the frontend. The site provides a comprehensive shopping experience with features such as product listings, user authentication, shopping cart functionality, and order processing.
 Features
 •⁠  ⁠User Authentication: Secure login and registration using PassportJs
